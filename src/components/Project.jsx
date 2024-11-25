@@ -3,10 +3,10 @@ import Cards from './Cards';
 
 const Project = () => {
   return (
-    <div id='project'>
+    <div id='project'>  
       {/* Header Section */}
-      <div className="w-full flex justify-center p-5 m-5">
-        <h1 className="text-3xl font-bold underline underline-offset-8 decoration-red-700">
+      <div className="w-full flex justify-center mb-10">
+        <h1 className="text-3xl md:text-4xl font-bold underline underline-offset-8 decoration-red-700">
           Projects
         </h1>
       </div>

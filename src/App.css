@@ -6,8 +6,41 @@ body {
     font-family: 'serif';
     color: #E2E8F0;
     position: relative; /* Necessary for layering content if needed */
+    overflow-x: hidden;
+    
 }
 
+/* Reset margins and padding */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+  }
+  
+  /* Box-sizing and overflow prevention */
+  * {
+    box-sizing: border-box; /* Ensures padding doesn't add extra width */
+  }
+  
+  .container, .flex-container, .grid-container {
+    max-width: 100%; /* Ensure containers don't overflow */
+  }
+  
+  /* Ensure images don't overflow */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Prevent overflow on smaller screens */
+  @media (max-width: 768px) {
+    .container {
+      margin: 0;
+      padding: 10px;
+    }
+  }
+     
 body::before {
     content: '';
     position: fixed; /* Fixes the pseudo-element to the viewport */
