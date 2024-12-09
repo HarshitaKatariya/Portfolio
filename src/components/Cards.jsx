@@ -33,15 +33,6 @@ const Cards = () => {
       liveLink: 'https://github.com/HarshitaKatariya/PayTM',
       techStack: ['React', 'JavaScript', 'TailwindCss', 'Mongoodb', 'Node.js', 'Express', 'Git']
     },
-    {
-      img: paytm,
-      imgAlt: 'paytm-image',
-      title: 'Payment Application',
-      description: 'The Payment Application in which you can create account and transfer money to others accounts.',
-      githubLink: 'https://github.com/HarshitaKatariya/PayTM',
-      liveLink: 'https://github.com/HarshitaKatariya/PayTM',
-      techStack: ['React', 'JavaScript', 'TailwindCss', 'Mongoodb', 'Node.js', 'Express', 'Git']
-    },
   ];
 
   return (
