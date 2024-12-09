@@ -7,7 +7,6 @@ body {
     color: #E2E8F0;
     position: relative; /* Necessary for layering content if needed */
     overflow-x: hidden;
-    
 }
 
 /* Reset margins and padding */
