@@ -1,6 +1,6 @@
 import React from 'react';
 import Icons from './Icons';
-import Resume from '../images/GW_Resume.pdf';
+import Resume from '../images/resume2025(HK).pdf';
 
 function Home() {
   return (
