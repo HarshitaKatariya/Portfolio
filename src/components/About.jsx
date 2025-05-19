@@ -74,7 +74,7 @@ const About = () => {
             transition={{ duration: 0.5, delay: 0.1 }}
           >
             Hi, I'm <span className="font-bold text-red-500">Harshita Katariya</span>, a passionate
-            <span className="font-bold text-red-500"> Full-Stack Developer</span>
+            <span className="font-bold text-red-500"> Full-Stack Developer </span>
             building dynamic, user-centric web applications. I specialize in creating seamless, scalable, and
             high-performance digital solutions—blending intuitive UI design with robust backend logic.
           </motion.p>

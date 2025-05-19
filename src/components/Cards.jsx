@@ -1,6 +1,6 @@
 import React from 'react';
 import Card from './Card';
-import todo from '../images/todo.png';
+import medium from '../images/medium.png'
 import blog from '../images/blog.png';
 import paytm from '../images/paytm1.png';
 import { motion } from 'framer-motion';
@@ -8,13 +8,13 @@ import { motion } from 'framer-motion';
 const Cards = () => {
   const cards = [
     {
-      img: todo,
-      imgAlt: 'Todo-image',
-      title: 'Task Management App',
-      description: 'Task Manager helps manage your daily tasks. Built with React, Tailwind CSS, and local storage.',
-      githubLink: 'https://github.com/HarshitaKatariya/Todo_LocalStorage',
-      liveLink: 'https://todo-local-storage-weld.vercel.app/',
-      techStack: ['React', 'JavaScript', 'TailwindCss', 'LocalStorage']
+      img: medium,
+      imgAlt: 'Medium',
+      title: 'Medium Clone',
+      description: 'Medium clone, Frontedn in React and Backend using TS + Cloudflare.',
+      githubLink: 'https://github.com/HarshitaKatariya/medium',
+      liveLink: 'https://medium-jet-five.vercel.app/signup',
+      techStack: ['React', 'JavaScript', 'TailwindCss', 'Typescript', 'Mongodb','Cloudflare']
     },
     {
       img: blog,
