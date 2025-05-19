@@ -3,6 +3,7 @@ import Card from './Card';
 import todo from '../images/todo.png';
 import blog from '../images/blog.png';
 import paytm from '../images/paytm1.png';
+import { motion } from 'framer-motion';
 
 const Cards = () => {
   const cards = [
@@ -35,9 +36,26 @@ const Cards = () => {
     },
   ];
 
+  // Container and card animations
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2
+      }
+    }
+  };
+
   return (
-    <div className="w-full flex justify-center py-8">
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 px-4 w-full max-w-screen-xl justify-items-center">
+    <motion.div 
+      className="w-full flex justify-center py-8"
+      variants={containerVariants}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+    >
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 px-4 w-full max-w-screen-xl justify-items-center">
         {cards.map((card, index) => (
           <Card
             key={index}
@@ -48,10 +66,11 @@ const Cards = () => {
             githubLink={card.githubLink}
             liveLink={card.liveLink}
             techStack={card.techStack}
+            index={index}
           />
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 };
 
