@@ -5,11 +5,12 @@ import {
   faReact, 
   faNodeJs, 
   faJs, 
-  faSass, 
+  faJava, 
   faDocker, 
   faAws, 
   faCss3Alt, 
-  faGithub 
+  faGithub ,
+  faCloudflare 
 } from '@fortawesome/free-brands-svg-icons';
 import { faDatabase, faCode, faServer } from '@fortawesome/free-solid-svg-icons';
 import AnimatedSection from './AnimatedSection';
@@ -18,14 +19,15 @@ const skills = [
   { icon: faReact, name: 'React', color: 'text-blue-500', level: 90 },
   { icon: faNodeJs, name: 'Node.js', color: 'text-green-500', level: 85 },
   { icon: faJs, name: 'JavaScript', color: 'text-yellow-500', level: 92 },
-  { icon: faSass, name: 'Sass', color: 'text-pink-500', level: 75 },
+  { icon: faJava, name: 'Java', color: 'text-pink-500', level: 75 },
   { icon: faDocker, name: 'Docker', color: 'text-blue-600', level: 70 },
   { icon: faAws, name: 'AWS', color: 'text-orange-500', level: 65 },
   { icon: faCss3Alt, name: 'Tailwind CSS', color: 'text-teal-500', level: 88 },
   { icon: faCode, name: 'TypeScript', color: 'text-blue-700', level: 80 },
   { icon: faDatabase, name: 'MongoDB', color: 'text-green-600', level: 85 },
   { icon: faServer, name: 'Express.js', color: 'text-gray-700', level: 82 },
-  { icon: faGithub, name: 'Next.js', color: 'text-black', level: 78 },
+  { icon: faGithub, name: 'GitHub', color: 'text-black', level: 78 },
+  { icon: faCloudflare, name: 'DevOps', color: 'text-black', level: 78 },
 ];
 
 const Skill = () => {
