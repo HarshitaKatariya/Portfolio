@@ -1,28 +1,28 @@
-export default async function handler(req, res) {
-  if (req.method !== 'POST') {
-    res.status(405).end();
-    return;
+export const runtime = "nodejs";
+
+export async function POST(req) {
+  try {
+    const body = await req.json();
+
+    if (!process.env.SLACK_WEBHOOK_URL) {
+      console.error("Slack webhook missing");
+      return Response.json({ error: "Config error" }, { status: 500 });
+    }
+
+    await fetch(process.env.SLACK_WEBHOOK_URL, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        text: `🚨 *Frontend Crash*
+• Message: ${body.message}
+• URL: ${body.url}
+• Env: production`,
+      }),
+    });
+
+    return Response.json({ ok: true });
+  } catch (err) {
+    console.error("report-error failed", err);
+    return Response.json({ error: "Internal" }, { status: 500 });
   }
-
-  const payload = req.body || {};
-  if (!payload.message) {
-    res.status(400).json({ error: 'Invalid payload' });
-    return;
-  }
-
-  const webhook = process.env.SLACK_WEBHOOK_URL;
-  if (!webhook) {
-    res.status(500).json({ error: 'Slack webhook not configured' });
-    return;
-  }
-
-  await fetch(webhook, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      text: `🚨 ${payload.type || 'Error'}: ${payload.message}`,
-    }),
-  });
-
-  res.status(200).json({ ok: true });
 }
